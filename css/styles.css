@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+:root{
+    --color-gradient: linear-gradient(90deg, #eee, #f9f9f9, #eee);
+    --color-background: #d9d9d9;
+    --color-card-background: #fff;
+    --color-header: #000;
+    --color-info: #363949;
+    --text-color-thi: #7D88A1;
+    --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+*{
+
+        padding: auto;
+        margin: auto;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+      }
+        .navbar_container {
+            background-color: black;
+            overflow: hidden;
+            position: sticky;
+            transition: transform 0.2s ease-in-out;
+        }
+        .navbar_container a:hover {
+            transform: translateY(5px);
+        }
+
+        html {
+            scroll-behavior: smooth;
+          }
+        #web{
+            font-weight: 800;
+        }
+        #web span{
+            color: #039BE5;
+        }
+          
+      
+        .navbar_container a
+        {
+            margin-left: 10px;
+            margin-top: 10px;
+            height: 14px;
+            float: right;
+            display: block;
+            color: #CD461C;
+            font-weight: 1000;
+            text-decoration-style: solid; 
+            text-align: center;
+            padding: 20px 16px;
+            text-decoration: none;
+        }
+
+        .wbname u{
+            margin-top: 5px;
+            float: left;
+            font-size: 20px;
+            margin-left: 10px;
+            color: aliceblue;
+            float: left;
+            margin: 12px 20px 10px 20px;
+        }
+        .home{
+            display: flex;
+            justify-content: center;
+            height: 70vh;
+            width: auto;
+       
+        }
+        .title{
+            color: #039BE5;
+            font-size: 30px;
+            margin-top: 80px;
+            margin-right: 30vw;
+        }
+        .intro{
+            margin-top: 5px;
+            color: #CD461C;
+           
+        }
+    
+        b{
+            color: white;
+        }
+        i{  
+            font-size: 30px;
+        }
+        
+        .home .devprof .devpic img{
+            margin-top: 10vh;
+            margin-right: -10vw;
+            float: right;
+            max-width: 300px;
+            max-height: 300px;
+            
+        }
+        .intro img{
+            margin-top: 5px;
+            height: 40px;
+            width: 40px;
+            background-color: white;
+            border-radius: 10px;
+            animation: loading 1s infinite reverse;
+        }
+
+        .About {
+            background-color: white;
+            padding: 20px;
+            display: flex;
+            height: 75vh;
+
+
+        }
+        .About .about_sec {
+            margin-left: 150px;
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .about_sec b{
+            color: black;
+        }
+.dark-mode{
+    --color-gradient: linear-gradient(to right, #656871 0%, #888b94 20%, #656871 40%, #656871 100%);
+    --color-background: #414247;
+    --color-card-background: #252525;
+    --color-header: #fff;
+    --color-info: #ccc;
+    --box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#toggle{
+
+    margin: 10px;
+    padding: 5px;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    position:relative;
+    top: 5%;
+    right: 3%;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+}
+#toggle b{
+    color: black;
+}
+
+.card{
+    max-width: 380px;
+    background: var(--color-card-background);
+    box-shadow: var(--box-shadow);
+    padding: 1.3rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+
+}
+.card li a{
+    color: white;
+}
+.card .card-image{
+    margin-bottom: 1rem;
+}
+
+.card .card-image img{
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 0.25rem;
+}
+
+.card-header{
+    color: var(--color-header);
+    font-size: 1.25rem;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 0.25rem;
+}
+
+.card-info{
+    color: var(--color-info);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.loading{
+    position: relative;
+}
+
+.loading::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0.25rem;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: var(--color-gradient);
+    background-size: 200%;
+    animation: loading 1s infinite reverse;
+}
+
+
+
+@keyframes loading {
+    0%{
+        background-position: -100% 0;
+    }
+    100%{
+        background-position: 100% 0;
+    }
+}
+.page{
+    background-color: black;    
+    height: 250vh;
+
+}
+h2{
+    color: black;
+}
+h1{
+    padding: auto;
+    margin: auto;
+color: white;
+ height: 5vh;
+background-color:darkblue ;
+display: flex;
+justify-content: center;
+}
+.skills-container{
+    background-color: white;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-gap: 15px;
+}
+.skill-card{
+ background-color: white;
+padding: 15px;
+border-radius: 5px;
+}
+.skill-card div h3{
+    font-size: 1em;
+    font-family: poppins, sans-serif;
+    font-weight: 700;
+    margin-left: 10px;
+}
+.skill-card p{
+    font-size: 1em;
+    font-family: poppins, sans-serif;
+    font-weight: 500;
+    color: var(--text-color-thi);
+ 
+}
+
+.orange-text{
+    color: #FF6D00;
+}
+.dblue-text{
+    color: #039BE5;
+}
+.ruequisoe-text{
+    color: #27D8FC;
+}
+.teal-text{
+    color: #19B5B9;
+}
+.yellow-text{
+    color: #FFD600;
+}
+.skill-card img{
+    height: 50px;
+    width: 50px;
+}
+h2{
+    padding: auto;
+    margin: auto;
+    background-color: white;
+    text-align: left;
+}
+
+
+/* Styles for the Back End Stack section */
+.back-end-container {
+    background-color: white;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-gap: 15px;
+}
+
+.back-end-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.back-end-card div h3 {
+    font-size: 1.5em;
+    font-family: poppins, sans-serif;
+    font-weight: 700;
+    margin-left: 10px;
+}
+.front-end h3{
+    color: #000;
+}
+.back-end-card p {
+    font-size: 0.5em;
+    font-family: poppins, sans-serif;
+    font-weight: 500;
+    color: var(--text-color-thi);
+}
+
+.green-text {
+    color: #72ec72; /* Change to the desired color for Back End stack */
+}
+
+.purple-text {
+    color: #800080; /* Change to the desired color for Back End stack */
+}
+
+.pink-text {
+    color: #FF69B4; /* Change to the desired color for Back End stack */
+}
+
+.blue-text {
+    color: #0000FF; /* Change to the desired color for Back End stack */
+}
+
+.red-text {
+    color: #FF0000; /* Change to the desired color for Back End stack */
+}
+
+/* You can add more colors and styles as needed */
+
+.back-end-card img {
+    height: 50px;
+    width: 50px;
+}
+
+/* Style the h2 tag for the Back End Stack section */
+.back-end-container h2 {
+    padding: auto;
+    margin: auto;
+    background-color: white;
+    text-align: left;
+}
+
+
+/*  Services section */
+
+/* Styles for Service Cards */
+.service-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.2s ease-in-out;
+}
+
+.service-card:hover {
+    color: whitesmoke;
+    transform: translateY(-20px);
+}
+
+.service-card div h3 {
+    font-size: 1.5em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin-top: 15px;
+    color: var(--color-header);
+}
+
+.service-card p {
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: var(--text-color-thi);
+}
+
+.bluee-back {
+
+    color: white;
+}
+
+.purplee-back {
+
+    color: white;
+}
+
+.greenn-back {
+
+    color: white;
+}
+
+.yelloww-back {
+
+    color: var(--color-header);
+}
+.bluee-back img{
+border-radius: 20px;
+    }
+.projects{
+   padding: auto;
+   margin: auto;
+}
+
+.copywrite{
+    height: 8vh;
+    background-color: #000;
+    text-align: center;
+}
